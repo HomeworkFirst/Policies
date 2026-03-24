@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="作业先 法律文档">
+    <title>作业先 - 法律文档</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .card-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        
+        .card h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .card p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        
+        .card a {
+            color: #007AFF;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            font-size: 16px;
+        }
+        
+        .card a:hover {
+            text-decoration: underline;
+        }
+        
+        .arrow {
+            margin-left: 5px;
+            transition: margin-left 0.3s;
+        }
+        
+        .card:hover .arrow {
+            margin-left: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            opacity: 0.9;
+        }
+        
+        .footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 36px;
+            }
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 作业先</h1>
+            <p>法律文档</p>
+        </div>
+        
+        <div class="card" onclick="window.location.href='privacy.html'">
+            <div class="card-icon">📄</div>
+            <h2>隐私政策</h2>
+            <p>了解我们如何收集、使用和保护您的数据。</p>
+            <a href="privacy.html">查看隐私政策 <span class="arrow">→</span></a>
+        </div>
+        
+        <div class="card" onclick="window.location.href='terms.html'">
+            <div class="card-icon">📋</div>
+            <h2>服务条款</h2>
+            <p>使用作业先应用的条款和条件。</p>
+            <a href="terms.html">查看服务条款 <span class="arrow">→</span></a>
+        </div>
+        
+        <div class="footer">
+            <p>© 2026 作业先. 保留所有权利.</p>
+            <p>最后更新：2026年3月</p>
+        </div>
+    </div>
+</body>
+</html>
