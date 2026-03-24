@@ -9,9 +9,9 @@
 
 ## 🌐 在线访问
 
-- 导航页：https://shaozema.github.io/homeworkfirst-policies/
-- 隐私政策：https://shaozema.github.io/homeworkfirst-policies/privacy.html
-- 服务条款：https://shaozema.github.io/homeworkfirst-policies/terms.html
+- 导航页：https://homeworkfirst.github.io/Policies/
+- 隐私政策：https://homeworkfirst.github.io/Policies/privacy.html
+- 服务条款：https://homeworkfirst.github.io/Policies/terms.html
 
 ## 📝 文档说明
 
