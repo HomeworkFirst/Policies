@@ -130,7 +130,7 @@
         <a href="index.html" class="back-button">← 返回首页</a>
         
         <h1>作业先 隐私政策</h1>
-        <p class="update-date"><strong>最后更新日期：</strong>2026年3月</p>
+        <p class="update-date"><strong>最后更新日期：</strong>2026年4月</p>
 
         <h2>1. 简介</h2>
         <p>欢迎使用作业先（"本应用"、"我们"）。我们重视您的隐私，并致力于保护您的个人信息。本隐私政策说明了我们如何收集、使用和保护您的数据。</p>
@@ -144,9 +144,11 @@
         <ul>
             <li>用户昵称和头像</li>
             <li>任务信息（标题、描述、截止时间等）</li>
-            <li>打卡记录和完成记录</li>
-            <li>图片和音频文件（仅存储在您的设备）</li>
-            <li>评价和积分记录</li>
+            <li>打卡记录、评价记录和完成记录</li>
+            <li>图片、音频和视频文件（仅存储在您的设备）</li>
+            <li>积分和兑换记录</li>
+            <li>日程和课表数据（日程事件、重复规则等）</li>
+            <li>背诵练习记录（背诵结果，音频在识别完成后立即丢弃，不存储）</li>
         </ul>
         
         <p><strong>应用设置：</strong></p>
@@ -179,28 +181,30 @@
         <h2>3. 数据使用</h2>
         <p>我们收集的数据仅用于以下目的：</p>
         <ul>
-            <li><strong>提供核心功能：</strong> 管理任务、打卡、完成记录等</li>
+            <li><strong>提供核心功能：</strong> 管理任务和日程</li>
             <li><strong>数据同步：</strong> 通过 Apple iCloud 在您的设备间同步数据</li>
-            <li><strong>本地通知：</strong> 发送任务提醒通知</li>
+            <li><strong>本地通知：</strong> 发送任务和日程提醒通知</li>
             <li><strong>订阅管理：</strong> 管理您的订阅状态（通过 Apple StoreKit）</li>
         </ul>
 
         <h2>4. 数据存储</h2>
         
         <h3>4.1 本地存储</h3>
-        <p>大部分数据存储在您的设备上，使用 Apple SwiftData 框架：</p>
+        <p>全部数据存储在您的设备上，使用 Apple SwiftData 框架：</p>
         <ul>
             <li>任务和记录数据</li>
             <li>用户配置</li>
-            <li>图片和音频文件</li>
+            <li>图片、音频和视频文件</li>
+            <li>日程和课表数据</li>
         </ul>
         
         <h3>4.2 iCloud 存储</h3>
         <p>如果您启用了 iCloud 同步，以下数据会通过 Apple CloudKit 同步：</p>
         <ul>
-            <li>用户信息</li>
             <li>任务和记录数据</li>
-            <li>应用设置</li>
+            <li>用户配置</li>
+            <li>图片、音频和视频文件</li>
+            <li>日程和课表数据</li>
         </ul>
         
         <div class="highlight">
@@ -224,7 +228,7 @@
         <p>如果您启用了屏幕时间管理功能，应用会使用 Apple 的 Screen Time API：</p>
         <ul>
             <li><strong>使用的 API：</strong> FamilyControls, ManagedSettings, DeviceActivity</li>
-            <li><strong>存储的数据：</strong> 设备使用时长会话、应用白名单/黑名单配置</li>
+            <li><strong>存储的数据：</strong> 设备使用时长会话、应用限制黑名单配置</li>
             <li><strong>数据用途：</strong> 实现"完成任务兑换设备使用时长"的功能</li>
             <li><strong>权限要求：</strong> 需要家长授权才能使用（Face ID/Touch ID 或设备密码验证）</li>
             <li><strong>数据管理：</strong> 配置数据由 iOS 系统的 ManagedSettingsStore 自动管理</li>
@@ -236,7 +240,7 @@
             <ul style="margin-top: 10px;">
                 <li>此功能完全基于 Apple 官方 Screen Time 框架</li>
                 <li>家长可以控制孩子完成任务后才能使用设备</li>
-                <li>支持白名单模式（仅允许指定应用）和黑名单模式（屏蔽指定应用）</li>
+                <li>支持完全限制和学习限制两种黑名单模式（屏蔽指定应用）</li>
                 <li>所有限制配置仅存储在本地，受 iOS 系统保护</li>
                 <li>可以随时在应用中禁用此功能</li>
             </ul>
@@ -284,13 +288,15 @@
             <li><strong>StoreKit：</strong> 应用内购买</li>
             <li><strong>UserNotifications：</strong> 本地通知</li>
             <li><strong>Screen Time API：</strong> 屏幕时间管理（FamilyControls、ManagedSettings、DeviceActivity）</li>
+            <li><strong>Speech Framework（SFSpeechRecognizer）：</strong> 背诵练习中的语音识别功能。语音数据由 Apple 的语音识别服务处理，可能发送至 Apple 服务器进行识别，识别完成后立即丢弃，本应用不存储原始音频。使用此功能需要麦克风和语音识别权限。</li>
+            <li><strong>AVFoundation：</strong> 音频录制和视频播放（任务语音打卡和附件记录）</li>
         </ul>
         <p>这些服务受 <a href="https://www.apple.com/cn/privacy/" target="_blank">Apple 隐私政策</a> 约束。</p>
         
         <h3>9.2 无其他第三方</h3>
         <p>本应用不使用任何第三方服务，包括：</p>
         <ul>
-            <li>❌ 不使用分析工具（如 Google Analytics）</li>
+            <li>❌ 不使用数据上传分析工具</li>
             <li>❌ 不使用广告 SDK</li>
             <li>❌ 不使用社交媒体 SDK</li>
             <li>❌ 不使用第三方云服务</li>
@@ -299,7 +305,7 @@
         <h2>10. 隐私政策变更</h2>
         <p>我们可能会不时更新本隐私政策。重大变更时，我们会：</p>
         <ul>
-            <li>在应用中通知您</li>
+            <li>更新应用通知您</li>
             <li>更新"最后更新日期"</li>
             <li>征求您的同意（如法律要求）</li>
         </ul>
@@ -307,13 +313,13 @@
         <h2>11. 联系我们</h2>
         <p>如有关于隐私的问题或疑虑，请通过以下方式联系我们：</p>
         <ul>
-            <li><strong>邮箱：</strong> <a href="mailto:souther217@gmail.com">souther217@gmail.com</a></li>
+            <li><strong>邮箱：</strong> <a href="mailto:33142343@qq.com">33142343@qq.com</a></li>
             <li><strong>应用内反馈：</strong> 在"我的" > "关于"中提交反馈</li>
         </ul>
 
         <div class="footer">
             <p><strong>您使用本应用即表示同意本隐私政策。</strong></p>
-            <p style="margin-top: 20px;">© 2026 作业先. 保留所有权利.</p>
+            <p style="margin-top: 20px;">© 2026 作业先. 保留所有权利. 最后更新：2026年4月</p>
             <p><a href="index.html">返回首页</a> | <a href="terms.html">服务条款</a></p>
         </div>
     </div>
