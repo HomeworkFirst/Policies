@@ -47,7 +47,7 @@
 ## 📱 应用信息
 
 - **名称：** 作业先 (HomeworkFirst)
-- **类型：** 家庭作业管理
+- **类型：** 家庭学习任务管理
 - **平台：** iOS
 - **技术栈：** SwiftUI, SwiftData, CloudKit, StoreKit 2
 
