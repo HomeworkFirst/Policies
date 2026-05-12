@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ZuoyeXian Legal Documents">
+    <title>ZuoyeXian - Legal Documents</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        
+        .header-logo {
+            width: 96px;
+            height: 96px;
+            border-radius: 22px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        }
+        
+        .header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .card-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        
+        .card h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .card p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        
+        .card a {
+            color: #007AFF;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            font-size: 16px;
+        }
+        
+        .card a:hover {
+            text-decoration: underline;
+        }
+        
+        .arrow {
+            margin-left: 5px;
+            transition: margin-left 0.3s;
+        }
+        
+        .card:hover .arrow {
+            margin-left: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            opacity: 0.9;
+        }
+        
+        .footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 36px;
+            }
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="HomeworkFirst.png" alt="ZuoyeXian" class="header-logo">
+            <h1>ZuoyeXian</h1>
+            <p>Legal Documents</p>
+        </div>
+        
+        <div class="card" onclick="window.location.href='privacy-en.html'">
+            <div class="card-icon">📄</div>
+            <h2>Privacy Policy</h2>
+            <p>Learn how we collect, use, and protect your data.</p>
+            <a href="privacy-en.html">View Privacy Policy <span class="arrow">→</span></a>
+        </div>
+        
+        <div class="card" onclick="window.location.href='terms-en.html'">
+            <div class="card-icon">📋</div>
+            <h2>Terms of Service</h2>
+            <p>Terms and conditions for using the ZuoyeXian app.</p>
+            <a href="terms-en.html">View Terms of Service <span class="arrow">→</span></a>
+        </div>
+        
+        <div class="footer">
+            <p>© 2026 ZuoyeXian. All rights reserved.</p>
+            <p>Last Updated: April 2026</p>
+        </div>
+    </div>
+</body>
+</html>
