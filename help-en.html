@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ZuoyeXian User Guide">
+    <title>User Guide - ZuoyeXian</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f8f9fa;
+            padding: 20px;
+        }
+
+        .page-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+        }
+
+        .toc {
+            width: 200px;
+            flex-shrink: 0;
+            position: sticky;
+            top: 20px;
+            background: white;
+            border-radius: 12px;
+            padding: 24px 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .toc-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc-list li {
+            margin-bottom: 4px;
+        }
+
+        .toc-list a {
+            display: block;
+            padding: 8px 12px;
+            border-radius: 6px;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .toc-list a:hover {
+            background: #f0f4ff;
+            color: #007AFF;
+            text-decoration: none;
+        }
+
+        .toc-list a.active {
+            background: #e8f0fe;
+            color: #007AFF;
+            font-weight: 600;
+        }
+
+        .container {
+            flex: 1;
+            min-width: 0;
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #007AFF;
+            font-size: 32px;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #007AFF;
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 24px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .step {
+            margin-bottom: 16px;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 26px;
+            height: 26px;
+            background: #007AFF;
+            color: white;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: 600;
+            margin-right: 8px;
+            flex-shrink: 0;
+        }
+
+        .step p {
+            display: inline;
+            font-size: 16px;
+            color: #444;
+        }
+
+        .step-image {
+            display: block;
+            max-width: 280px;
+            width: 100%;
+            margin: 12px auto 20px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .role-badge {
+            display: inline-block;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            vertical-align: middle;
+        }
+
+        .badge-admin {
+            background: #fff3e0;
+            color: #e65100;
+        }
+
+        .badge-child {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        a {
+            color: #007AFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #007AFF;
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            transition: background 0.3s;
+        }
+
+        .back-button:hover {
+            background: #0051D5;
+            text-decoration: none;
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .footer p {
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .page-wrapper {
+                flex-direction: column;
+            }
+
+            .toc {
+                width: 100%;
+                position: static;
+                padding: 16px 20px;
+            }
+
+            .toc-list {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .toc-list li {
+                margin-bottom: 0;
+            }
+
+            .toc-list a {
+                padding: 6px 10px;
+                font-size: 13px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <nav class="toc">
+            <div class="toc-title">Contents</div>
+            <ul class="toc-list">
+                <li><a href="#config">1. How to Configure Screen Time Management & Time Exchange?</a></li>
+                <li><a href="#exchange">2. How to Exchange iPad Time in [Free / Study] Mode?</a></li>
+                <li><a href="#contact">3. Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <a href="index-en.html" class="back-button">← Back to Home</a>
+
+            <h1>ZuoyeXian User Guide</h1>
+
+            <!-- Admin Configuration -->
+            <h2 id="config">1. How to Configure Screen Time Management & Time Exchange?</h2>
+
+            <div class="step">
+                <p><span class="step-number">1</span>Open the app, go to the <b>[Profile]</b> tab, and enter the <b>[Profile]</b> page. If the current user is not the <b>[Admin User]</b>, switch to the <b>[Admin User]</b> account via <b>[Switch User]</b>.</p>
+            </div>
+
+            <div class="step">
+                <p><span class="step-number">2</span>Make sure <b>[Switch to Admin View]</b> is enabled. If not, tap <b>[Switch to Admin View]</b> to enable it.</p>
+            </div>
+
+            <div class="step">
+                <p><span class="step-number">3</span>Tap <b>[Screen Time Management]</b> to enter the screen time settings page.</p>
+                <img src="images/Profile-en.PNG" alt="Profile page" class="step-image">
+            </div>
+
+            <div class="step">
+                <p><span class="step-number">4</span>Confirm that <b>[Screen Time Permission]</b> has been granted. If not, tap to grant the permission.</p>
+            </div>
+
+            <div class="step">
+                <p><span class="step-number">5</span>Devices that have been granted <b>[Screen Time Permission]</b> can be enabled for control in the <b>[Screen Time Control]</b> list.</p>
+                <img src="images/ScreenTimeSettings_1-en.PNG" alt="Screen Time settings" class="step-image">
+            </div>
+
+            <div class="step">
+                <p><span class="step-number">6</span>In <b>[Lock Mode Restrictions] / [Study Mode Restrictions] / [Free Mode Restrictions]</b>, tap <b>[Select Apps to Restrict]</b> to open the app picker and choose categories or specific apps to restrict.</p>
+                <img src="images/ScreenTimeSettings_2-en.PNG" alt="Restriction mode settings" class="step-image">
+                <img src="images/ChooseApp-en.PNG" alt="Choose apps" class="step-image">
+            </div>
+
+            <div class="step">
+                <p><span class="step-number">7</span>Once configured, return to the <b>[Profile]</b> page and tap <b>[Points Settings]</b> to enter the points settings page.</p>
+                <img src="images/Profile_2-en.PNG" alt="Profile page" class="step-image">
+            </div>
+
+            <div class="step">
+                <p><span class="step-number">8</span>Under <b>[iPad Usage Time]</b>, configure parameters such as daily exchange limit, available time slots, and available days.</p>
+                <img src="images/PointsSettings-en.PNG" alt="Points settings" class="step-image">
+            </div>
+
+            <!-- Child User Exchange -->
+            <h2 id="exchange">2. How to Exchange iPad Time in [Free / Study] Mode?</h2>
+
+            <div class="step">
+                <p><span class="step-number">1</span>As a <b>[Child User]</b>, after completing tasks and earning points, go to the <b>[Statistics]</b> tab and tap <b>[Exchange iPad Time]</b> to enter the exchange page.</p>
+                <img src="images/Statistics-en.PNG" alt="Statistics page" class="step-image">
+            </div>
+
+            <div class="step">
+                <p><span class="step-number">2</span>The <b>[Child User]</b> can exchange iPad time in <b>[Study Mode]</b> or <b>[Free Mode]</b> based on the day's task completion status.</p>
+            </div>
+
+            <div class="step">
+                <p><span class="step-number">3</span>After a successful exchange, <b>[Screen Time Management]</b> will apply the restriction configuration for <b>[Study Mode]</b> or <b>[Free Mode]</b>, unlocking apps that are not in the restriction list.</p>
+                <img src="images/ExchangeTime-en.PNG" alt="Exchange time page" class="step-image">
+            </div>
+
+            <h2 id="contact">3. Contact Us</h2>
+            <p>If you encounter any issues while using the app, please contact us:</p>
+            <ul style="padding-left: 1.2em; margin-left: 0;">
+                <li><strong>Email:</strong> <a href="mailto:33142343@qq.com">33142343@qq.com</a></li>
+            </ul>
+
+            <div class="footer">
+                <p style="margin-top: 20px;">© 2026 ZuoyeXian. All rights reserved. Last Updated: August 2026</p>
+                <p><a href="index-en.html">Back to Home</a> | <a href="terms-en.html">Terms of Service</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            var links = document.querySelectorAll('.toc-list a');
+            var headings = [];
+            links.forEach(function(a) {
+                var id = a.getAttribute('href').replace('#', '');
+                var el = document.getElementById(id);
+                if (el) headings.push({ el: el, link: a });
+            });
+
+            function onScroll() {
+                var current = headings[0];
+                for (var i = 0; i < headings.length; i++) {
+                    if (headings[i].el.getBoundingClientRect().top <= 120) {
+                        current = headings[i];
+                    }
+                }
+                links.forEach(function(a) { a.classList.remove('active'); });
+                if (current) current.link.classList.add('active');
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+        })();
+    </script>
+</body>
+</html>

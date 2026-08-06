@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="作业先 使用帮助">
+    <title>使用帮助 - 作业先</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f8f9fa;
+            padding: 20px;
+        }
+
+        .page-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+        }
+
+        .toc {
+            width: 200px;
+            flex-shrink: 0;
+            position: sticky;
+            top: 20px;
+            background: white;
+            border-radius: 12px;
+            padding: 24px 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .toc-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc-list li {
+            margin-bottom: 4px;
+        }
+
+        .toc-list a {
+            display: block;
+            padding: 8px 12px;
+            border-radius: 6px;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .toc-list a:hover {
+            background: #f0f4ff;
+            color: #007AFF;
+            text-decoration: none;
+        }
+
+        .toc-list a.active {
+            background: #e8f0fe;
+            color: #007AFF;
+            font-weight: 600;
+        }
+
+        .container {
+            flex: 1;
+            min-width: 0;
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #007AFF;
+            font-size: 32px;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #007AFF;
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 24px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .step {
+            margin-bottom: 16px;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 26px;
+            height: 26px;
+            background: #007AFF;
+            color: white;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: 600;
+            margin-right: 8px;
+            flex-shrink: 0;
+        }
+
+        .step p {
+            display: inline;
+            font-size: 16px;
+            color: #444;
+        }
+
+        .step-image {
+            display: block;
+            max-width: 280px;
+            width: 100%;
+            margin: 12px auto 20px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .role-badge {
+            display: inline-block;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            vertical-align: middle;
+        }
+
+        .badge-admin {
+            background: #fff3e0;
+            color: #e65100;
+        }
+
+        .badge-child {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        a {
+            color: #007AFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #007AFF;
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            transition: background 0.3s;
+        }
+
+        .back-button:hover {
+            background: #0051D5;
+            text-decoration: none;
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .footer p {
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .page-wrapper {
+                flex-direction: column;
+            }
+
+            .toc {
+                width: 100%;
+                position: static;
+                padding: 16px 20px;
+            }
+
+            .toc-list {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .toc-list li {
+                margin-bottom: 0;
+            }
+
+            .toc-list a {
+                padding: 6px 10px;
+                font-size: 13px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <nav class="toc">
+            <div class="toc-title">目录</div>
+            <ul class="toc-list">
+                <li><a href="#config">1. 如何配置屏幕时间管理功能和兑换时间控制？</a></li>
+                <li><a href="#exchange">2. 如何兑换 iPad【自由/学习】模式使用时间？</a></li>
+                <li><a href="#contact">3. 联系我们</a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <a href="index.html" class="back-button">← 返回首页</a>
+
+            <h1>作业先 使用帮助</h1>
+
+            <!-- 管理员配置 -->
+            <h2 id="config">1. 如何配置屏幕时间管理功能和兑换时间控制？</h2>
+
+            <div class="step">
+                <p><span class="step-number">1</span>进入 APP 后，选中<b>【我的】</b>Tab 页，进入<b>【个人信息】</b>页面。如果当前登录用户不是<b>【管理员】</b>，需要通过<b>【切换用户】</b>切换至<b>【管理员】</b>身份。</p>
+            </div>
+
+            <div class="step">
+                <p><span class="step-number">2</span>确认<b>【切换至管理视图】</b>是选中状态，如果不是，需要点击<b>【切换至管理视图】</b>进行选中。</p>
+            </div>
+
+            <div class="step">
+                <p><span class="step-number">3</span>点击<b>【屏幕时间管理】</b>进入屏幕时间管理设置页。</p>
+                <img src="images/Profile.PNG" alt="个人信息页面" class="step-image">
+            </div>
+
+            <div class="step">
+                <p><span class="step-number">4</span>确认<b>【屏幕时间管理权限】</b>已授权，如果没有授权，需要点击获得授权。</p>
+            </div>
+
+            <div class="step">
+                <p><span class="step-number">5</span>获得<b>【屏幕时间管理权限】</b>授权的设备，可以在<b>【启用控制】</b>列表中进行启用控制。</p>
+                <img src="images/ScreenTimeSettings_1.PNG" alt="屏幕时间管理设置" class="step-image">
+            </div>
+
+            <div class="step">
+                <p><span class="step-number">6</span>在<b>【锁定模式限制】/【学习模式限制】/【自由模式限制】</b>中可以点击<b>【选择要限制的应用】</b>弹出选择页面，选择需要限制的类别或具体应用。</p>
+                <img src="images/ScreenTimeSettings_2.PNG" alt="限制模式设置" class="step-image">
+                <img src="images/ChooseApp.PNG" alt="选择应用" class="step-image">
+            </div>
+
+            <div class="step">
+                <p><span class="step-number">7</span>设置完毕后，返回<b>【个人信息】</b>页，点击<b>【积分设置】</b>，进入<b>【积分设置】</b>页面。</p>
+                <img src="images/Profile_2.PNG" alt="个人信息页面2" class="step-image">
+            </div>
+
+            <div class="step">
+                <p><span class="step-number">8</span>在<b>【iPad使用时间】</b>中配置日兑换上限、可兑换时段、可兑换日期等参数。</p>
+                <img src="images/PointsSettings.PNG" alt="积分设置页面" class="step-image">
+            </div>
+
+            <!-- 子用户兑换 -->
+            <h2 id="exchange">2. 如何兑换 iPad【自由/学习】模式使用时间？</h2>
+
+            <div class="step">
+                <p><span class="step-number">1</span><b>【子用户】</b>登录 App，完成学习任务获得积分后，可以选中<b>【统计】</b>Tab 页，点击<b>【兑换iPad时间】</b>进入兑换页面。</p>
+                <img src="images/Statistics.PNG" alt="统计页面" class="step-image">
+            </div>
+
+            <div class="step">
+                <p><span class="step-number">2</span><b>【子用户】</b>可以根据当日任务完成状态兑换<b>【学习模式】</b>或<b>【自由模式】</b>的 iPad 使用时间。</p>
+            </div>
+
+            <div class="step">
+                <p><span class="step-number">3</span>兑换成功后，<b>【屏幕时间管理】</b>功能按照<b>【学习模式】</b>或<b>【自由模式】</b>的限制配置，解锁不在限制配置中的应用。</p>
+                <img src="images/ExchangeTime.PNG" alt="兑换时间页面" class="step-image">
+            </div>
+
+            <h2 id="contact">3. 联系我们</h2>
+            <p>如您在使用过程中遇到任何问题，请通过以下方式联系我们：</p>
+            <ul style="padding-left: 1.2em; margin-left: 0;">
+                <li><strong>邮箱：</strong> <a href="mailto:33142343@qq.com">33142343@qq.com</a></li>
+            </ul>
+
+            <div class="footer">
+                <p style="margin-top: 20px;">© 2026 作业先。 保留所有权利。最后更新：2026年8月</p>
+                <p><a href="index.html">返回首页</a> | <a href="terms.html">服务条款</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            var links = document.querySelectorAll('.toc-list a');
+            var headings = [];
+            links.forEach(function(a) {
+                var id = a.getAttribute('href').replace('#', '');
+                var el = document.getElementById(id);
+                if (el) headings.push({ el: el, link: a });
+            });
+
+            function onScroll() {
+                var current = headings[0];
+                for (var i = 0; i < headings.length; i++) {
+                    if (headings[i].el.getBoundingClientRect().top <= 120) {
+                        current = headings[i];
+                    }
+                }
+                links.forEach(function(a) { a.classList.remove('active'); });
+                if (current) current.link.classList.add('active');
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+        })();
+    </script>
+</body>
+</html>
